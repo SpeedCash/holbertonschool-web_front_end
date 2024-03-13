@@ -36,25 +36,22 @@ body {
     line-height: var(--line-height-base);
 }
 
-a[href] {
+a[href]:not(.visually-hidden) {
     color: var(--text-color);
     text-decoration: none;
 }
 
-a[href]:visited {
-    font-style: italic;
+a[href]:visited:not(.visually-hidden) {
+    color: var(--text-color);
+    text-decoration: italic;
 }
 
-a[href]:hover {
+a[href]:hover:not(.visually-hidden) {
     text-decoration: underline;
 }
 
-a[href]:active {
+a[href]:active:not(.visually-hidden) {
     background-color: var(--color-light-grey);
-}
-
-.visually-hidden {
-    display: none;
 }
 
 .section-header {
@@ -79,4 +76,8 @@ a[href]:active {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
+}
+
+.visually-hidden {
+    display: none;
 }
